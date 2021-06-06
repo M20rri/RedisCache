@@ -111,7 +111,7 @@ namespace MicrosoftArchiveRedis.Controllers
             string cacheKey = "cacheKeyWithTags";
 
             //Step 1: Connect to redis server.
-            using (ConnectionMultiplexer redisCon = ConnectionMultiplexer.Connect("localhost"))
+            using (ConnectionMultiplexer redisCon = ConnectionMultiplexer.Connect("10.10.1.235:6379,password=JYMe9j4sb7WNRvrG"))
             {
                 //Step 2: Get the reference of the redis database using the redis connection.
                 IDatabase _redisDb = redisCon.GetDatabase();
@@ -141,7 +141,7 @@ namespace MicrosoftArchiveRedis.Controllers
         public async Task<IHttpActionResult> GetWithTagsAuthors([FromBody] TagWithOwnerEntityType model)
         {
             //Step 1: Connect to redis server.
-            using (ConnectionMultiplexer redisCon = ConnectionMultiplexer.Connect("localhost"))
+            using (ConnectionMultiplexer redisCon = ConnectionMultiplexer.Connect("10.10.1.235:6379,password=JYMe9j4sb7WNRvrG"))
             {
                 //Step 2: Get the reference of the redis database using the redis connection.
                 IDatabase redisDbConnection = redisCon.GetDatabase();

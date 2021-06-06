@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
-using MicrosoftArchiveRedis.Models;
-using Newtonsoft.Json;
+﻿using System.Threading.Tasks;
 using StackExchange.Redis;
 
 namespace MicrosoftArchiveRedis.Extension
